@@ -3,7 +3,7 @@
 bool memory::init(const std::string process_name)
 {
 	LPCSTR szParams[] = { "", "-device", "fpga" };
-	detail::hVMM = VMMDLL_Initialize(3, (LPSTR*)szParams);
+	detail::hVMM = VMMDLL_Initialize(3, szParams);
 
 	if (!detail::hVMM) {
 		printf("[!] Failed to initialize memory process file system in call to vmm.dll!VMMDLL_Initialize (Error: %d)\n", GetLastError());

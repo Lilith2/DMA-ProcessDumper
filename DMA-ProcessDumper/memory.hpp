@@ -75,7 +75,7 @@ namespace memory
 	{
 		DWORD dwPID;
 		PVMMDLL_MAP_MODULEENTRY pModuleEntryExplorer;
-		bool result = VMMDLL_Map_GetModuleFromNameU(detail::hVMM, process_id, const_cast<char*>(process_name.c_str()), &pModuleEntryExplorer);
+		bool result = VMMDLL_Map_GetModuleFromNameU(detail::hVMM, process_id, const_cast<char*>(process_name.c_str()), &pModuleEntryExplorer,0);
 
 		if (result) {
 			detail::process_size = pModuleEntryExplorer->cbImageSize;

@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/.vs
+/DMA-ProcessDumper/x64
+/x64
